@@ -52,7 +52,7 @@ const InfoInvoiceCard: React.FC<InvoiceCardProps> = ({
       <div className="flex justify-between items-center w-full">
         <div className="flex flex-col gap-2">
           <p className="text-[#6B7280] text-md font-medium m-0">{title}</p>
-          <p className="text-[#999999] text-sm font-semibold m-0">{value}</p>
+          <p className="text-[#999999] text-sm font-normal m-0">{value}</p>
         </div>
         <div className="flex items-center gap-2">
           <span

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ReactApexChart from "react-apexcharts";
 import type { ApexOptions } from "apexcharts";
 import { RiArrowLeftSLine } from "react-icons/ri";
-import { FaCrown } from "react-icons/fa";
+import { FaCrown, FaPaw } from "react-icons/fa";
 import { LuCalendarDays, LuCirclePlus } from "react-icons/lu";
 import { IoMdArrowDropdown } from "react-icons/io";
 import "./index.css";
@@ -10,11 +10,26 @@ import InfoCard from "./components/InfoCard";
 import InfoInvoiceCard from "./components/InfoInvoiceCard";
 
 // Add type assertions for the icon components
-const RiArrowLeftSLineIcon = RiArrowLeftSLine as React.ComponentType<{ size: number }>;
-const FaCrownIcon = FaCrown as React.ComponentType<{ size: number; color: string }>;
-const LuCalendarDaysIcon = LuCalendarDays as React.ComponentType<{ size: number; color: string }>;
-const LuCirclePlusIcon = LuCirclePlus as React.ComponentType<{ size: number; color: string }>;
-const IoMdArrowDropdownIcon = IoMdArrowDropdown as React.ComponentType<{ size: number; color?: string }>;
+const RiArrowLeftSLineIcon = RiArrowLeftSLine as React.ComponentType<{
+  size: number;
+}>;
+const FaCrownIcon = FaCrown as React.ComponentType<{
+  size: number;
+  color: string;
+}>;
+const LuCalendarDaysIcon = LuCalendarDays as React.ComponentType<{
+  size: number;
+  color: string;
+}>;
+const LuCirclePlusIcon = LuCirclePlus as React.ComponentType<{
+  size: number;
+  color: string;
+}>;
+const IoMdArrowDropdownIcon = IoMdArrowDropdown as React.ComponentType<{
+  size: number;
+  color?: string;
+}>;
+const FaPawIcon = FaPaw as React.ComponentType<{ size: number; color: string }>;
 
 const Dashboard = () => {
   const [chartState] = useState<{
@@ -93,7 +108,7 @@ const Dashboard = () => {
             <RiArrowLeftSLineIcon size={28} />
             Back
           </button>
-          <h1 className="text-lg font-semibold">Dashboard</h1>
+          <h1 className="text-lg font-medium">Dashboard</h1>
           <img
             src="profile.png"
             alt="Profile"
@@ -117,13 +132,13 @@ const Dashboard = () => {
             >
               Create New Invoice
             </h2>
-            <p className="text-xs text-[#999999] text-center mt-1">
-              Generate and send invoices in seconds.
+            <p className="text-xs text-[#999999] font-normal text-center mt-1">
+              Start by creating and sending new invoice
             </p>
           </div>
 
           <div className="flex items-center justify-center mt-4 mb-6">
-            <p className="text-[#8134AF] text-xs font-medium m-0">
+            <p className="text-[#8134AF] text-xs font-normal m-0">
               Or Upload an existing invoice and set payment reminder
             </p>
           </div>
@@ -143,7 +158,7 @@ const Dashboard = () => {
               <p className="text-[#999999] text-sm font-medium m-0">
                 Time Period
               </p>
-              <p className="text-[#999999] text-sm font-semibold m-0">
+              <p className="text-[#999999] text-sm font-normal m-0">
                 dd:mm:yyyy - dd:mm:yyyy
               </p>
             </div>
@@ -156,7 +171,7 @@ const Dashboard = () => {
                   boxSizing: "border-box",
                 }}
               >
-                <p className="text-[#999999] text-sm font-medium m-0">
+                <p className="text-[#999999] text-sm font-normal m-0">
                   1 Month
                 </p>
               </div>
@@ -169,7 +184,7 @@ const Dashboard = () => {
                 }}
               >
                 <p
-                  className="text-sm m-0 
+                  className="text-sm font-normal m-0 
                bg-[linear-gradient(169.7deg,#DD2A7B_1.49%,#9747FF_42.07%,#334CCA_99.84%)] 
                bg-clip-text text-transparent"
                 >
@@ -185,7 +200,7 @@ const Dashboard = () => {
                   boxSizing: "border-box",
                 }}
               >
-                <p className="text-[#999999] text-sm font-medium m-0">1 Year</p>
+                <p className="text-[#999999] text-sm font-normal m-0">1 Year</p>
 
                 <FaCrownIcon size={24} color="#9747FF" />
               </div>
@@ -200,7 +215,7 @@ const Dashboard = () => {
                 }}
               >
                 <LuCalendarDaysIcon size={18} color="#999999" />
-                <p className="text-[#999999] text-sm font-medium m-0">Custom</p>
+                <p className="text-[#999999] text-sm font-normal m-0">Custom</p>
               </div>
             </div>
           </div>
@@ -230,7 +245,7 @@ const Dashboard = () => {
               <h2 className="text-lg font-medium text-[#6B7280] mb-0.5 mt-0">
                 Income Trend
               </h2>
-              <p className="text-sm text-[#999999] mt-0">
+              <p className="text-sm font-normal text-[#999999] mt-0">
                 Your monthly income and growth for the last 6 months.
               </p>
             </div>
@@ -309,6 +324,16 @@ const Dashboard = () => {
               status="Paid"
             />
           </div>
+        </div>
+        <div className="flex flex-col items-center mb-8">
+          <div className="flex items-center gap-2">
+            <p className="text-[#999999] text-sm font-bold m-0">Spark</p>
+            <FaPawIcon size={14} color="#9747FF" />
+            <p className="text-[#999999] text-sm font-normal m-0">nomy</p>
+          </div>
+          <p className="text-[#999999] text-sm font-normal m-0">
+            sparking the creator economy
+          </p>
         </div>
       </main>
     </div>
