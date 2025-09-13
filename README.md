@@ -1,13 +1,13 @@
 # Invoice Dashboard UI
 
-A modern, responsive dashboard for managing invoices built with React, TypeScript, and Tailwind CSS.
+A modern dashboard for managing invoices built with React, TypeScript, and Tailwind CSS.
 
 ## Features
 
 - View income trends with interactive charts
 - Manage invoices with different statuses
 - Filter and sort invoices
-- Responsive design for mobile and desktop
+- Responsive design for mobile
 - Clean and intuitive user interface
 
 ## Tech Stack
